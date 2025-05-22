@@ -1,0 +1,2120 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pay After Placement Program – iTokyo Academy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #005A9C; /* Deeper Professional Blue */
+            --secondary-color: #FFB81C; /* Vibrant Gold/Yellow */
+            --accent-green: #28a745; /* Clear Success Green */
+            --accent-orange: #fd7e14; /* Sharp Attention Orange */
+            --text-color: #212529; /* Darker, more standard text color */
+            --light-text-color: #f8f9fa;
+            --bg-color: #f9fafb; /* Slightly refined light gray */
+            --card-bg: #ffffff;
+            --border-color: #ced4da; /* Softer border color */
+            --table-header-bg: #eef2f7; /* Lighter table header */
+            --neutral-light: #f1f3f5;
+            --neutral-dark: #495057;
+            --shadow-xs: 0 1px 2px rgba(0,0,0,0.04);
+            --shadow-sm: 0 2px 4px rgba(0,0,0,0.05);
+            --shadow-md: 0 4px 8px rgba(0,0,0,0.07);
+            --shadow-lg: 0 10px 20px rgba(0,0,0,0.08);
+            --border-radius: 8px; /* Unified border radius */
+            --itokyo-brand-emphasis: var(--secondary-color); /* Renamed variable for clarity */
+            --transition-standard: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.75; /* Increased for readability */
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            font-size: 16px; /* Base font size for laptop */
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            overflow-x: hidden; /* Prevent horizontal scroll on body */
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1160px; /* Slightly narrower for better line lengths */
+            margin: 0 auto;
+            padding: 30px 0; /* Adjusted padding */
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--primary-color);
+            margin-bottom: 0.75em; /* Relative margin */
+            font-weight: 700;
+            line-height: 1.3;
+        }
+
+        h1 { font-size: 2.6em; text-align: center; } /* Base h1 */
+        h2 {
+            font-size: 2.1em; /* Base h2 */
+            border-bottom: 3px solid var(--secondary-color);
+            padding-bottom: 0.6em;
+            margin-top: 2.5em;
+            position: relative;
+            font-weight: 700;
+        }
+         h2::before {
+            content: '';
+            position: absolute;
+            top: -12px; /* Adjusted */
+            left: 0;
+            width: 70px;
+            height: 3px;
+            background-color: var(--primary-color);
+            border-radius: 2px;
+        }
+
+        h3 { font-size: 1.6em; color: var(--primary-color); margin-top: 1.8em; font-weight: 600;}
+        h4 { font-size: 1.2em; color: var(--neutral-dark); margin-top: 1.5em; margin-bottom: 0.5em; font-weight: 600;}
+
+        p { margin-bottom: 1.2em; font-size: 1em; }
+        a { color: var(--primary-color); text-decoration: none; font-weight: 600; transition: color 0.2s ease; }
+        a:hover { color: var(--secondary-color); text-decoration: underline; }
+        a:focus-visible { /* For keyboard navigation */
+            outline: 2px solid var(--secondary-color);
+            outline-offset: 2px;
+            border-radius: 2px; /* Optional: match link rounding if any */
+            text-decoration: underline; /* Ensure underline on focus if also on hover */
+        }
+
+        ul, ol { margin-bottom: 1.2em; padding-left: 25px; }
+        li { margin-bottom: 0.6em; }
+
+        strong.iTokyo-Academy { color: var(--primary-color); font-weight: 700; }
+        .itokyo-brand-text { color: var(--primary-color); font-weight: 600; }
+
+
+        /* --- Navigation (Air Bar Style) --- */
+        nav {
+            background-color: rgba(255, 255, 255, 0.85); /* Lighter, slightly transparent white */
+            backdrop-filter: blur(10px); /* Frosted glass effect */
+            -webkit-backdrop-filter: blur(10px); /* For Safari */
+            padding: 15px 0;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08); /* Softer, more diffused shadow */
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid var(--border-color); /* Optional: very subtle border */
+            width: 100%;
+            transition: var(--transition-standard);
+        }
+        nav.scrolled {
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 12px 0;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+        }
+        nav .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 90%;
+            max-width: 1160px;
+            margin: 0 auto;
+        }
+        
+        .logo-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 20px; /* Space between logo and phone */
+        }
+        nav .logo { 
+            font-family: 'Montserrat', sans-serif; 
+            font-size: 1.5em; /* Slightly larger for brand name */
+            color: var(--primary-color); 
+            font-weight: 800; 
+            white-space: nowrap;
+            transition: var(--transition-standard);
+        }
+        nav.scrolled .logo {
+            font-size: 1.4em;
+        }
+        nav .logo .academy-name-tagline { 
+            color: var(--secondary-color); 
+            font-weight: 600; 
+            font-size: 0.7em; 
+            display: block; 
+            line-height: 1.1;
+            transition: var(--transition-standard);
+            margin-top: 2px;
+        }
+        nav.scrolled .logo .academy-name-tagline {
+            font-size: 0.65em;
+        }
+        .nav-phone-main {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 1em;
+            color: var(--accent-orange);
+            text-decoration: none;
+            white-space: nowrap;
+            padding: 5px 8px;
+            border-radius: 6px;
+            background-color: transparent; /* Default */
+            transition: var(--transition-standard);
+        }
+        .nav-phone-main:hover {
+            color: var(--light-text-color);
+            background-color: var(--accent-orange);
+            text-decoration: none;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+            gap: 0 15px; /* Spacing between nav items */
+        }
+        nav ul li { margin: 0; } /* Margin handled by gap */
+        nav ul li a {
+            color: var(--primary-color);
+            font-weight: 600;
+            font-size: 0.95em;
+            padding: 8px 10px;
+            border-radius: 6px;
+            position: relative;
+            transition: var(--transition-standard);
+            white-space: nowrap;
+        }
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 50%;
+            background-color: var(--secondary-color);
+            transition: var(--transition-standard);
+            transform: translateX(-50%);
+        }
+        nav ul li a:hover::after, nav ul li a.active::after {
+            width: 70%;
+        }
+        nav ul li a:hover, nav ul li a.active {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        nav ul li a.active {
+            font-weight: 700;
+        }
+        
+        /* Mobile menu */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--primary-color);
+            font-size: 1.5em;
+            cursor: pointer;
+            padding: 5px;
+            transition: var(--transition-standard);
+        }
+        .mobile-menu-btn:hover {
+            color: var(--secondary-color);
+        }
+
+        /* --- Hero Header --- */
+        .hero-header {
+            background: linear-gradient(rgba(0, 70, 130, 0.88), rgba(0, 40, 90, 0.95)), url('https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2') no-repeat center center/cover; /* Tech-related image */
+            color: var(--light-text-color);
+            padding: 80px 20px 100px 20px; /* Increased padding */
+            text-align: center;
+        }
+        .hero-header h1 {
+            color: var(--light-text-color);
+            font-size: clamp(2.8em, 6vw + 1em, 3.8em); /* Fluid font size, larger for PAP */
+            margin-bottom: 0.3em;
+            letter-spacing: 1px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            font-weight: 800;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.6s forwards 0.2s;
+        }
+        .hero-header .subtitle {
+            font-family: 'Open Sans', sans-serif; 
+            font-size: clamp(1.3em, 3.5vw + 0.5em, 1.8em); 
+            color: var(--secondary-color);
+            margin-bottom: 1.2em; 
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.6s forwards 0.4s;
+            border-bottom: none; 
+            padding-bottom: 0;
+            margin-top: 0;
+            text-align: center;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .hero-header .subtitle::before { display: none; } 
+        .hero-cta {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+            padding: 16px 40px; 
+            border-radius: 50px;
+            font-size: 1.2em; 
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            text-decoration: none;
+            transition: var(--transition-standard);
+            box-shadow: var(--shadow-md);
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.6s forwards 0.8s;
+        }
+        .hero-cta:hover {
+            background-color: #FFC745;
+            color: var(--primary-color);
+            text-decoration: none;
+            transform: translateY(-3px) scale(1.03);
+            box-shadow: var(--shadow-lg);
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* --- Section Styling --- */
+        section {
+            padding: 40px 25px;
+            background-color: var(--card-bg);
+            margin-bottom: 30px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-lg);
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            transform: translateY(30px); 
+            opacity: 0;
+        }
+        section.visible {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        section:last-of-type { margin-bottom: 0; }
+
+        /* --- Specific Section Styling for PAP --- */
+        .section-intro-text {
+            text-align: center;
+            max-width: 850px;
+            margin: 0 auto 1.5em auto;
+            color: var(--neutral-dark);
+            font-size: 1.05em;
+        }
+        
+        /* Benefits Grid */
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 2em;
+        }
+        .benefit-item {
+            background-color: var(--neutral-light);
+            padding: 25px;
+            border-radius: var(--border-radius);
+            text-align: left; 
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition-standard);
+            display: flex; 
+            align-items: flex-start; 
+            gap: 15px;
+        }
+        .benefit-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+        .benefit-item .icon {
+            font-size: 2.2em; 
+            color: var(--primary-color);
+            margin-bottom: 0; 
+            flex-shrink: 0; 
+            width: 40px; 
+            text-align: center;
+        }
+        .benefit-item .benefit-text-content h4 {
+            color: var(--primary-color);
+            font-size: 1.15em;
+            margin-top:0;
+            margin-bottom: 0.3em;
+        }
+        .benefit-item .benefit-text-content p {
+            font-size: 0.95em;
+            color: var(--neutral-dark);
+            line-height: 1.6;
+            margin-bottom: 0;
+        }
+        
+        /* Eligibility & Conditions Section Card Style */
+        .condition-card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 2em;
+        }
+        .condition-card {
+            background-color: var(--neutral-light);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            border-left: 5px solid var(--primary-color);
+            box-shadow: var(--shadow-xs);
+        }
+        .condition-card h4 {
+            font-size: 1.1em;
+            color: var(--primary-color);
+            margin-top: 0;
+            margin-bottom: 0.5em;
+        }
+        .condition-card ul {
+            padding-left: 20px;
+            margin-bottom: 0;
+        }
+        .condition-card ul li {
+            font-size: 0.9em;
+            color: var(--neutral-dark);
+            margin-bottom: 0.4em;
+        }
+        .highlight-warning {
+            background-color: #fff3cd;
+            color: #856404;
+            padding: 10px;
+            border-radius: var(--border-radius);
+            margin-top: 10px;
+            font-size: 0.9em;
+            border: 1px solid #ffeeba;
+        }
+
+        /* Course Breakdown Section */
+        .course-breakdown-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 2em;
+        }
+        .course-category-card {
+            background-color: var(--card-bg);
+            padding: 25px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--border-color);
+        }
+        .course-category-card h3 {
+            font-size: 1.4em;
+            margin-top: 0;
+            margin-bottom: 0.8em;
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 0.4em;
+        }
+        .course-category-card .language-level {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.8em;
+            padding: 10px;
+            background-color: var(--neutral-light);
+            border-radius: var(--border-radius);
+        }
+        .language-level .level-tag {
+            background-color: var(--primary-color);
+            color: var(--light-text-color);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 0.9em;
+            margin-right: 15px;
+            min-width: 50px; 
+            text-align: center;
+        }
+        .language-level .level-description {
+            font-size: 0.95em;
+            color: var(--neutral-dark);
+        }
+        .course-category-card ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .course-category-card ul li {
+            background-color: var(--neutral-light);
+            padding: 12px 15px;
+            border-radius: var(--border-radius);
+            margin-bottom: 10px;
+            font-size: 0.95em;
+            display: flex;
+            align-items: center;
+        }
+        .course-category-card ul li .fa-code, .course-category-card ul li .fa-cogs { 
+            color: var(--secondary-color);
+            margin-right: 10px;
+            font-size: 1.2em;
+        }
+
+        /* Program Timeline Section */
+        .timeline {
+            list-style: none;
+            padding: 0;
+            position: relative;
+            margin-top: 2em;
+        }
+        .timeline::before { 
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 20px; 
+            width: 4px;
+            background: var(--neutral-light);
+            border-radius: 2px;
+        }
+        .timeline-item {
+            margin-bottom: 30px;
+            position: relative;
+            padding-left: 60px; 
+        }
+        .timeline-item:last-child {
+            margin-bottom: 0;
+        }
+        .timeline-icon {
+            position: absolute;
+            left: 0;
+            top: 0; 
+            width: 44px;
+            height: 44px;
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3em;
+            border: 3px solid var(--bg-color); 
+            z-index: 1; 
+        }
+        .timeline-content {
+            background-color: var(--neutral-light);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-xs);
+        }
+        .timeline-content h4 {
+            margin-top: 0;
+            font-size: 1.15em;
+            color: var(--primary-color);
+            margin-bottom: 0.4em;
+        }
+        .timeline-content p {
+            font-size: 0.95em;
+            color: var(--neutral-dark);
+            margin-bottom: 0;
+        }
+        .timeline-content .timing {
+            display: block;
+            font-size: 0.85em;
+            color: var(--accent-orange);
+            font-weight: 600;
+            margin-top: 5px;
+        }
+
+        /* Accordion */
+        .accordion-item {
+            background-color: var(--card-bg);
+            margin-bottom: 10px;
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-xs);
+            transition: var(--transition-standard);
+        }
+        .accordion-item:hover { box-shadow: var(--shadow-sm); }
+        .accordion-header {
+            background-color: var(--neutral-light);
+            padding: 15px 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid transparent;
+            transition: var(--transition-standard);
+        }
+        .accordion-header:hover { background-color: #e2e6ea; }
+        .accordion-header:focus-visible { outline: 2px solid var(--primary-color); outline-offset: -2px; }
+        .accordion-header h4 { margin: 0; font-size: 1.1em; color: var(--primary-color); font-weight: 600; font-family: 'Open Sans', sans-serif; transition: var(--transition-standard); }
+        .accordion-header .icon { color: var(--primary-color); margin-right: 12px; font-size: 1.05em; transition: var(--transition-standard); }
+        .accordion-header .toggle-icon { font-size: 1.2em; color: var(--primary-color); transition: var(--transition-standard); }
+        .accordion-item.active { box-shadow: var(--shadow-md); }
+        .accordion-item.active .accordion-header { background-color: var(--primary-color); }
+        .accordion-item.active .accordion-header h4,
+        .accordion-item.active .accordion-header .icon,
+        .accordion-item.active .accordion-header .toggle-icon { color: var(--light-text-color); }
+        .accordion-item.active .toggle-icon { transform: rotate(180deg); }
+        .accordion-content {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1), padding-top 0.35s cubic-bezier(0.4, 0, 0.2, 1), padding-bottom 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+            background-color: #fdfdfd;
+        }
+        .accordion-content-inner { padding: 20px 0; }
+        .accordion-content p { font-size: 0.95em; margin-bottom: 0.8em; }
+        .accordion-content ul { list-style-type: disc; padding-left: 20px; margin-top: 0.5em; }
+        .accordion-content ul li { font-size: 0.9em; margin-bottom: 0.4em; }
+
+        .terms-cta-button {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: var(--light-text-color);
+            padding: 10px 20px;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            text-decoration: none;
+            margin-top: 1em;
+            transition: var(--transition-standard);
+            cursor: pointer; /* Ensure it looks clickable */
+        }
+        .terms-cta-button:hover {
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        
+        /* Registration Form Styling */
+        .registration-form-container {
+            background-color: var(--neutral-light);
+            padding: 30px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-md);
+        }
+        .form-group {
+            margin-bottom: 1.5em;
+        }
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 0.5em;
+            color: var(--primary-color);
+            font-size: 0.95em;
+        }
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group input[type="tel"],
+        .form-group input[type="date"],
+        .form-group input[type="number"],
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            font-size: 1em;
+            font-family: 'Open Sans', sans-serif;
+            transition: border-color 0.2s ease;
+        }
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 2px rgba(0, 90, 156, 0.2);
+        }
+        .form-group textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+        .form-group .radio-group label, .form-group .checkbox-group label {
+            font-weight: normal;
+            margin-right: 15px;
+            color: var(--text-color);
+            display: inline-flex; 
+            align-items: center;
+        }
+        .form-group .radio-group input[type="radio"], 
+        .form-group .checkbox-group input[type="checkbox"] {
+            margin-right: 5px;
+            accent-color: var(--primary-color); 
+        }
+        .form-group input[type="file"] {
+            padding: 8px; 
+            background-color: var(--card-bg);
+        }
+        .form-submit-btn {
+            display: inline-block;
+            background-color: var(--accent-green);
+            color: var(--light-text-color);
+            padding: 14px 35px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1em;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            cursor: pointer;
+            transition: var(--transition-standard);
+        }
+        .form-submit-btn:hover {
+            background-color: #218838;
+            transform: translateY(-2px);
+        }
+        .form-group .error-message {
+            color: #dc3545;
+            font-size: 0.85em;
+            margin-top: 0.3em;
+            display: block; /* Ensure it takes space */
+        }
+        .form-group .checkbox-group a {
+            font-weight: 600;
+            cursor: pointer; /* Make link look clickable */
+        }
+        #form-submission-message {
+            margin-top: 1.5em;
+            padding: 15px;
+            border-radius: var(--border-radius);
+            text-align: center;
+            font-weight: 600;
+            display: none; /* Hidden by default */
+        }
+        #form-submission-message.success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+            display: block;
+        }
+        #form-submission-message.error {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+            display: block;
+        }
+
+        /* Testimonials Section */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 2em;
+        }
+        .testimonial-card {
+            background-color: var(--neutral-light);
+            padding: 25px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-sm);
+            text-align: center;
+        }
+        .testimonial-card img.profile-pic {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-bottom: 1em;
+            object-fit: cover;
+            border: 3px solid var(--secondary-color);
+        }
+        .testimonial-card .quote {
+            font-style: italic;
+            color: var(--neutral-dark);
+            margin-bottom: 1em;
+            font-size: 0.95em;
+        }
+        .testimonial-card .name {
+            font-weight: 700;
+            color: var(--primary-color);
+            font-size: 1.05em;
+        }
+        .testimonial-card .company {
+            font-size: 0.9em;
+            color: var(--accent-orange);
+        }
+        .hiring-partners-logos {
+            margin-top: 2em;
+            text-align: center;
+        }
+        .hiring-partners-logos p {
+            font-size: 1.1em;
+            font-weight: 600;
+            margin-bottom: 1em;
+        }
+        .hiring-partners-logos .logo-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+        .hiring-partners-logos .logo-container img {
+            height: 50px; 
+            margin: 0 10px;
+            filter: grayscale(100%);
+            opacity: 0.7;
+            transition: var(--transition-standard);
+        }
+        .hiring-partners-logos .logo-container img:hover {
+            filter: grayscale(0%);
+            opacity: 1;
+        }
+
+        /* Modal for T&C */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1001;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.6);
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 10% auto;
+            padding: 25px 30px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 700px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-lg);
+            position: relative;
+        }
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+        .modal-header h3 {
+            margin: 0;
+            font-size: 1.5em;
+        }
+        .close-btn {
+            color: var(--neutral-dark);
+            font-size: 2em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+        .close-btn:hover, .close-btn:focus {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        .modal-body {
+            max-height: 60vh; 
+            overflow-y: auto;
+            font-size: 0.95em;
+            line-height: 1.6;
+        }
+        .modal-body h4 { font-size: 1.1em; margin-top: 1em; margin-bottom: 0.3em; color: var(--primary-color); }
+        .modal-body ul { padding-left: 20px; }
+        .modal-body ul li { font-size: 0.9em; margin-bottom: 0.3em; }
+
+
+        /* --- Footer --- */
+        footer {
+            text-align: center;
+            padding: 35px 0;
+            margin-top: 3em;
+            background-color: var(--neutral-dark);
+            color: #b0bec5;
+            font-size: 0.9em;
+            position: relative;
+            overflow: hidden;
+        }
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color), var(--primary-color));
+            z-index: 1;
+        }
+        footer p { margin-bottom: 0.6em; }
+        footer a { color: var(--secondary-color); font-weight: 600; transition: var(--transition-standard); }
+        footer a:hover { color: var(--light-text-color); text-decoration: none; }
+        .footer-brand { font-family: 'Montserrat', sans-serif; font-weight: 600; color: var(--light-text-color); }
+        .footer-brand .academy { color: var(--secondary-color); }
+        .footer-contact { font-size: 1.05em; margin-top: 10px; margin-bottom: 10px !important; }
+        .footer-contact strong { color: var(--light-text-color); }
+        .footer-contact a { margin: 0 8px; }
+
+
+        /* Back to top button */
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: var(--primary-color);
+            color: var(--light-text-color);
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2em;
+            box-shadow: var(--shadow-md);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: var(--transition-standard);
+            cursor: pointer;
+            z-index: 99;
+        }
+        .back-to-top.visible {
+            opacity: 0.9;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        .back-to-top:hover {
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+            opacity: 1;
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+        }
+
+
+        /* --- Responsive Adjustments --- */
+        @media (max-width: 992px) {
+            body { font-size: 15px; }
+            .container { width: 92%; padding: 25px 0; }
+
+            nav .nav-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .logo-wrapper {
+                flex-direction: column;
+                align-items: center;
+                margin-bottom: 12px;
+                text-align: center;
+            }
+            nav .logo { margin-bottom: 5px; text-align: center; }
+            .nav-phone-main { margin-top: 5px; font-size: 1em; }
+
+            nav ul {
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 8px 12px; 
+            }
+            nav ul li { margin: 0; } 
+            nav ul li a { font-size: 0.9em; padding: 6px 8px; }
+
+            .hero-header h1 { font-size: 2.8em; }
+            .hero-header .subtitle { font-size: 1.4em; }
+            h1 { font-size: 2.3em; }
+            h2 { font-size: 1.9em; }
+            h2::before { width: 60px; top: -10px; }
+            section { padding: 30px 20px; }
+
+            .timeline::before { left: 10px; }
+            .timeline-item { padding-left: 40px; }
+            .timeline-icon { width: 34px; height: 34px; font-size: 1.1em; }
+        }
+
+        @media (max-width: 768px) {
+            body { font-size: 14px; }
+            .container { width: 95%; }
+            .hero-header { padding: 60px 15px 80px 15px; }
+            .hero-header .subtitle { font-size: 1.2em; }
+            .hero-cta { font-size: 1.1em; padding: 14px 30px; }
+            h1 { font-size: 2em; }
+            h2 { font-size: 1.7em; margin-top: 2em; padding-bottom: 0.5em; }
+            h2::before { width: 50px; top: -8px; height: 2px;}
+            h3 { font-size: 1.4em; }
+            h4 { font-size: 1.1em; }
+            p { font-size: 0.95em; }
+            section { padding: 25px 15px; margin-bottom: 25px; }
+            
+            .mobile-menu-btn { display: block; }
+            nav .nav-container {
+                flex-direction: row; 
+                justify-content: space-between;
+            }
+            .logo-wrapper { 
+                flex-direction: column; 
+                align-items: flex-start; 
+                margin-bottom: 0;
+                text-align: left;
+                gap: 2px; 
+            }
+            nav .logo {
+                margin-bottom: 0;
+                text-align: left;
+                font-size: 1.2em; 
+            }
+            nav .logo .academy-name-tagline { font-size: 0.65em; }
+            .nav-phone-main {
+                font-size: 0.85em; 
+                padding: 2px 4px; 
+                display: block; 
+            }
+            
+            nav ul { 
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background-color: rgba(255, 255, 255, 0.98);
+                flex-direction: column;
+                align-items: center;
+                padding: 0;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.35s ease-out, padding 0.35s ease-out;
+                box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+                z-index: 1001; 
+            }
+            nav ul.mobile-visible {
+                max-height: 400px; 
+                padding: 15px 0;
+                overflow-y: auto;
+            }
+            nav ul li { width: 100%; text-align: center; }
+            nav ul li a { display: block; padding: 12px 15px; width: 100%; }
+            nav ul li a::after { display: none; } 
+
+            .back-to-top { bottom: 15px; right: 15px; width: 40px; height: 40px; font-size: 1.1em; }
+            .modal-content { width: 90%; margin: 15% auto; padding: 20px; }
+            .modal-header h3 { font-size: 1.3em;}
+            .modal-body { font-size: 0.9em; }
+
+            .timeline::before { display: none; } 
+            .timeline-item { padding-left: 0; margin-bottom: 20px; }
+            .timeline-icon { position: static; margin-bottom: 10px; display: inline-flex; transform: translateX(0); }
+            .condition-card-grid, .benefits-grid, .course-breakdown-grid, .testimonials-grid {
+                 grid-template-columns: 1fr; 
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav .logo { font-size: 1.1em; }
+            nav .logo .academy-name-tagline { font-size: 0.6em; } 
+            .nav-phone-main { font-size: 0.8em; }
+
+            .hero-header { padding: 50px 10px 70px 10px;}
+            .hero-header h1 { font-size: 2.2em; }
+            .hero-header .subtitle { font-size: 1.1em; }
+
+            h1 { font-size: 1.8em; }
+            h2 { font-size: 1.5em; }
+            h3 { font-size: 1.3em; }
+            
+            .accordion-header { padding: 12px 15px; }
+            .accordion-header h4 { font-size: 1em; }
+            .back-to-top { width: 35px; height: 35px; font-size: 1em; }
+            .registration-form-container { padding: 20px; }
+            .form-group input[type="text"],
+            .form-group input[type="email"],
+            .form-group input[type="tel"],
+            .form-group input[type="date"],
+            .form-group input[type="number"],
+            .form-group select,
+            .form-group textarea {
+                padding: 10px 12px;
+                font-size: 0.95em;
+            }
+            .form-submit-btn {
+                font-size: 1em;
+                padding: 12px 30px;
+            }
+        }
+
+        /* Print styles */
+        @media print {
+            nav, .back-to-top, .hero-cta, .form-submit-btn, .mobile-menu-btn, .terms-cta-button { display: none !important; }
+            body { font-size: 12pt; color: #000; background: #fff; }
+            h1, h2, h3, h4, .accordion-header h4 { color: #000; }
+            a { color: #000; text-decoration: underline; }
+            .hero-header { background: #f0f0f0 !important; color: #000 !important; clip-path: none; padding: 20px; }
+            .hero-header h1, .hero-header .subtitle { color: #000 !important; text-shadow: none; }
+            .container { width: 100%; padding: 0; }
+            section { page-break-inside: avoid; box-shadow: none; border: 1px solid #ddd; margin-bottom: 20px; break-inside: avoid; opacity: 1 !important; transform: translateY(0) !important; }
+            .accordion-item { page-break-inside: avoid; break-inside: avoid; }
+            .accordion-content { max-height: none !important; display: block !important; padding: 10px 0 !important; }
+            .accordion-content-inner { padding: 0 !important; }
+            footer { background: #f0f0f0 !important; color: #000 !important; border-top: 1px solid #ddd; }
+            .benefit-item, .condition-card, .course-category-card, .testimonial-card { border: 1px solid #ccc; box-shadow: none; }
+            .timeline-item, .timeline-content { background-color: #fff; border: 1px solid #ccc; }
+            .modal { display: none !important; }
+            .registration-form-container { border: 1px solid #ccc; box-shadow: none; background-color: #fff;}
+        }
+    </style>
+</head>
+<body>
+
+    <nav id="main-nav">
+        <div class="nav-container">
+            <div class="logo-wrapper">
+                <div class="logo">iTokyo Academy <span class="academy-name-tagline">Pay After Placement</span></div>
+                <a href="tel:9942993900" class="nav-phone-main"><i class="fas fa-phone-alt" style="margin-right: 5px;"></i>9942993900</a>
+            </div>
+            <button type="button" class="mobile-menu-btn" aria-label="Toggle navigation" aria-expanded="false">
+                <i class="fas fa-bars" aria-hidden="true"></i>
+            </button>
+            <ul id="nav-menu">
+                <li><a href="#hero-pap" class="active">Home</a></li>
+                <li><a href="#about-pap">About PAP</a></li>
+                <li><a href="#eligibility-conditions">Eligibility</a></li>
+                <li><a href="#course-breakdown">Courses</a></li>
+                <li><a href="#program-timeline">Timeline</a></li>
+                <li><a href="#terms-summary">T&C</a></li>
+                <li><a href="#registration-form">Apply Now</a></li>
+                <li><a href="#testimonials">Success Stories</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero-header" id="hero-pap">
+        <h1>Train Now. <span style="color: var(--secondary-color);">Pay After You Get Placed!</span></h1>
+        <h2 class="subtitle">Unlock your dream tech career in Japan. Master in-demand IT skills and Japanese language, and only pay your course fee once you secure a high-paying job.</h2>
+        <a href="#registration-form" class="hero-cta">Apply Now <i class="fas fa-rocket" aria-hidden="true" style="margin-left: 8px;"></i></a>
+    </header>
+
+    <div class="container">
+        <section id="about-pap">
+            <h2><i class="fas fa-info-circle section-title-icon" aria-hidden="true"></i>What is iTokyo Academy's Pay After Placement Program?</h2>
+            <p class="section-intro-text">iTokyo Academy's Pay After Placement (PAP) Program is designed to empower ambitious individuals like you. We provide comprehensive training in cutting-edge IT technologies and Japanese language proficiency (N5 to N2), enabling you to build a successful career in Japan. The best part? You invest in your future without immediate financial burden – your main course fee is payable only after you secure a job through our dedicated placement support.</p>
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <span class="icon"><i class="fas fa-money-bill-wave"></i></span>
+                    <div class="benefit-text-content">
+                        <h4>Course Fee: Paid ONLY After Placement</h4>
+                        <p>Focus on learning, not fees. Your primary course fee of ₹1,00,000 + GST is due only once you are successfully placed.</p>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <span class="icon"><i class="fas fa-handshake"></i></span>
+                    <div class="benefit-text-content">
+                        <h4>Job Consultation Fee: Post-Placement</h4>
+                        <p>Our success is tied to yours. A job consultation fee, equivalent to one month's gross salary, is applicable after placement.</p>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <span class="icon"><i class="fas fa-chalkboard-teacher"></i></span>
+                     <div class="benefit-text-content">
+                        <h4>Comprehensive Training</h4>
+                        <p>Gain expertise in both in-demand Tech Skills and Japanese Language (N5 to N2 proficiency levels).</p>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <span class="icon"><i class="fas fa-cogs"></i></span>
+                    <div class="benefit-text-content">
+                        <h4>Industry-Ready Curriculum</h4>
+                        <p>Our courses are designed by industry experts to equip you with the skills employers in Japan are looking for.</p>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <span class="icon"><i class="fas fa-user-tie"></i></span>
+                    <div class="benefit-text-content">
+                        <h4>Dedicated Placement Support</h4>
+                        <p>We are committed to helping you land your dream job in Japan with our extensive network and support.</p>
+                    </div>
+                </div>
+                 <div class="benefit-item">
+                    <span class="icon"><i class="fas fa-calendar-check"></i></span>
+                    <div class="benefit-text-content">
+                        <h4>Mandatory Attendance</h4>
+                        <p>A minimum of 95% - 100% attendance is required to ensure you get the most out of the program and stay on track for success.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="eligibility-conditions">
+            <h2><i class="fas fa-clipboard-check section-title-icon" aria-hidden="true"></i>Program Eligibility & Key Conditions</h2>
+            <p class="section-intro-text">Our Pay After Placement model is a commitment from us to you, and it requires your commitment in return. Please review the following key conditions to ensure this program is the right fit for you.</p>
+            <div class="condition-card-grid">
+                <div class="condition-card">
+                    <h4><i class="fas fa-coins" style="margin-right: 8px; color: var(--accent-orange);"></i>Initial Fees (Non-Refundable)</h4>
+                    <ul>
+                        <li><strong>Material & Resource Fee:</strong> INR 5,500 + applicable GST (payable upon registration).</li>
+                        <li><strong>Examination Fees:</strong> Official exam fees (e.g., JLPT) are separate and borne by the student.</li>
+                    </ul>
+                </div>
+                <div class="condition-card">
+                    <h4><i class="fas fa-tasks" style="margin-right: 8px; color: var(--accent-green);"></i>Mandatory Assessments</h4>
+                    <ul>
+                        <li><strong>3rd Month:</strong> N5 Assessment Test</li>
+                        <li><strong>6th Month:</strong> N4 Assessment Test</li>
+                        <li><strong>10th Month:</strong> N3 Assessment Test</li>
+                    </ul>
+                     <p class="highlight-warning" style="margin-top:10px; font-size:0.9em;"><strong>PAP Continuation Clause:</strong> PAP model continues only if all assessment tests are cleared.</p>
+                </div>
+                <div class="condition-card">
+                    <h4><i class="fas fa-exclamation-triangle" style="margin-right: 8px; color: var(--accent-orange);"></i>Consequence of Not Clearing Assessments</h4>
+                    <p style="font-size:0.9em; color:var(--neutral-dark);">If you fail to qualify in any assessment, the PAP model ceases. You will be required to pay the standard iTokyo Academy course fee of <strong>[ACTION: Provide Standard Fee Amount/Structure Here]</strong> to continue training. iTokyo Academy is not obligated to provide placement assistance under PAP terms in this scenario.</p>
+                </div>
+                <div class="condition-card">
+                    <h4><i class="fas fa-user-clock" style="margin-right: 8px; color:var(--primary-color);"></i>Attendance Requirement</h4>
+                     <p style="font-size:0.9em; color:var(--neutral-dark);">Minimum 95% - 100% attendance is mandatory throughout the program.</p>
+                </div>
+                <div class="condition-card">
+                    <h4><i class="fas fa-gavel" style="margin-right: 8px; color: #c0392b;"></i>Zero Tolerance for Misconduct</h4>
+                     <p style="font-size:0.9em; color:var(--neutral-dark);">Misconduct (e.g., requesting/lending money, inappropriate relationships, unauthorized leave/groups, sharing contacts without consent) leads to immediate disqualification from the PAP program.</p>
+                </div>
+                 <div class="condition-card">
+                    <h4><i class="fas fa-file-alt" style="margin-right: 8px; color:var(--primary-color);"></i>Document Submission & Consent</h4>
+                     <p style="font-size:0.9em; color:var(--neutral-dark);">Original educational documents and a cancelled cheque leaf are required at admission. Enrollment requires full knowledge and consent of parent(s)/guardian.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="course-breakdown">
+            <h2><i class="fas fa-laptop-code section-title-icon" aria-hidden="true"></i>What You Will Learn: Course Breakdown</h2>
+            <p class="section-intro-text">Our PAP program offers a dual-track curriculum, focusing on both Japanese language proficiency and essential IT skills to make you job-ready for the Japanese market. Typical course duration: <strong>[ACTION: Confirm Typical Course Duration, e.g., 12-15 Months]</strong>.</p>
+            <div class="course-breakdown-grid">
+                <div class="course-category-card">
+                    <h3><i class="fas fa-language" style="margin-right: 10px; color:var(--secondary-color);"></i>Japanese Language Levels</h3>
+                    <div class="language-level">
+                        <span class="level-tag">N5</span>
+                        <span class="level-description">Foundational Japanese: Basic grammar, vocabulary, and simple conversations.</span>
+                    </div>
+                    <div class="language-level">
+                        <span class="level-tag">N4</span>
+                        <span class="level-description">Elementary Japanese: Understanding of everyday conversations and reading simple texts.</span>
+                    </div>
+                    <div class="language-level">
+                        <span class="level-tag">N3</span>
+                        <span class="level-description">Intermediate Japanese: Comprehending daily life Japanese to a certain degree.</span>
+                    </div>
+                    <div class="language-level">
+                        <span class="level-tag">N2</span>
+                        <span class="level-description">Pre-Advanced Japanese: Understanding Japanese used in a broader range of situations. Key for many tech jobs.</span>
+                    </div>
+                </div>
+                <div class="course-category-card">
+                    <h3><i class="fas fa-cogs" style="margin-right: 10px; color:var(--secondary-color);"></i>IT Technologies</h3>
+                    <p style="font-size:0.9em; color:var(--neutral-dark); margin-bottom:1em;">[ACTION: Please provide the list of specific IT technology courses/tracks offered under PAP below. Examples:]</p>
+                    <ul>
+                        <li><i class="fas fa-code"></i>Full Stack Development (MERN/MEAN)</li>
+                        <li><i class="fas fa-code"></i>Data Science & Machine Learning (Python)</li>
+                        <li><i class="fas fa-cogs"></i>Cloud Computing (AWS/Azure)</li>
+                        <li><i class="fas fa-code"></i>Software Testing & QA</li>
+                        <!-- Add more as per iTokyo Academy's offerings -->
+                    </ul>
+                     <p style="font-size:0.9em; color:var(--neutral-dark); margin-top:1em;">Each IT track includes hands-on projects, coding best practices, and preparation for technical interviews.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="program-timeline">
+            <h2><i class="fas fa-road section-title-icon" aria-hidden="true"></i>Your Journey with iTokyo PAP: Program Roadmap</h2>
+            <p class="section-intro-text">Follow a structured path to success. Here’s a typical timeline of your journey in our Pay After Placement program. [ACTION: Please review and confirm/adjust these milestones and their typical timing.]</p>
+            <ol class="timeline">
+                <li class="timeline-item">
+                    <div class="timeline-icon"><i class="fas fa-file-signature"></i></div>
+                    <div class="timeline-content">
+                        <h4>1. Application & Selection</h4>
+                        <p>Submit your application, undergo our selection process including an aptitude test and interview.</p>
+                        <span class="timing">Month 0</span>
+                    </div>
+                </li>
+                <li class="timeline-item">
+                    <div class="timeline-icon"><i class="fas fa-hand-holding-usd"></i></div>
+                    <div class="timeline-content">
+                        <h4>2. Initial Fee Payment & Onboarding</h4>
+                        <p>Pay the non-refundable Material & Resource Fee. Complete onboarding and orientation.</p>
+                        <span class="timing">Month 0-1</span>
+                    </div>
+                </li>
+                <li class="timeline-item">
+                    <div class="timeline-icon"><i class="fas fa-book-reader"></i></div>
+                    <div class="timeline-content">
+                        <h4>3. Phase 1: Japanese N5 + Foundational Tech</h4>
+                        <p>Begin your intensive training in basic Japanese (N5) and foundational IT concepts for your chosen track.</p>
+                        <span class="timing">Months 1-3</span>
+                    </div>
+                </li>
+                <li class="timeline-item">
+                    <div class="timeline-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <div class="timeline-content">
+                        <h4>4. Assessment 1 (N5 Cleared)</h4>
+                        <p>Mandatory assessment to clear JLPT N5 level (or equivalent) to continue in the PAP model.</p>
+                         <span class="timing">End of Month 3 (Approx.)</span>
+                    </div>
+                </li>
+                <li class="timeline-item">
+                    <div class="timeline-icon"><i class="fas fa-laptop"></i></div>
+                    <div class="timeline-content">
+                        <h4>5. Phase 2: Japanese N4 + Intermediate Tech</h4>
+                        <p>Advance to Japanese N4 level and dive deeper into intermediate IT skills and mini-projects.</p>
+                        <span class="timing">Months 4-6</span>
+                    </div>
+                </li>
+                 <li class="timeline-item">
+                    <div class="timeline-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <div class="timeline-content">
+                        <h4>6. Assessment 2 (N4 Cleared)</h4>
+                        <p>Mandatory assessment to clear JLPT N4 level (or equivalent).</p>
+                         <span class="timing">End of Month 6 (Approx.)</span>
+                    </div>
+                </li>
+                <li class="timeline-item">
+                    <div class="timeline-icon"><i class="fas fa-project-diagram"></i></div>
+                    <div class="timeline-content">
+                        <h4>7. Phase 3: Japanese N3/N2 + Advanced Tech & Projects</h4>
+                        <p>Progress to Japanese N3/N2 levels. Focus on advanced IT topics, major projects, and portfolio building.</p>
+                        <span class="timing">Months 7-10</span>
+                    </div>
+                </li>
+                 <li class="timeline-item">
+                    <div class="timeline-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <div class="timeline-content">
+                        <h4>8. Assessment 3 (N3 Cleared)</h4>
+                        <p>Mandatory assessment to clear JLPT N3 level (or equivalent). N2 training continues alongside placement prep.</p>
+                        <span class="timing">End of Month 10 (Approx.)</span>
+                    </div>
+                </li>
+                <li class="timeline-item">
+                    <div class="timeline-icon"><i class="fas fa-briefcase"></i></div>
+                    <div class="timeline-content">
+                        <h4>9. Placement Preparation</h4>
+                        <p>Intensive preparation including resume building, mock interviews (technical & HR), and cultural training for Japan.</p>
+                        <span class="timing">Months 11-12+</span>
+                    </div>
+                </li>
+                <li class="timeline-item">
+                    <div class="timeline-icon"><i class="fas fa-flag-checkered"></i></div>
+                    <div class="timeline-content">
+                        <h4>10. Job Placement</h4>
+                        <p>Our placement team actively works to connect you with job opportunities in Japan.</p>
+                        <span class="timing">Post Training Completion</span>
+                    </div>
+                </li>
+                <li class="timeline-item">
+                    <div class="timeline-icon"><i class="fas fa-check-circle"></i></div>
+                    <div class="timeline-content">
+                        <h4>11. PAP Fee Payment Triggered</h4>
+                        <p>Once you secure a job and receive your first salary, the PAP course fee payment process begins as per the agreement.</p>
+                         <span class="timing">Post Placement & First Salary</span>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <section id="terms-summary">
+            <h2><i class="fas fa-file-contract section-title-icon" aria-hidden="true"></i>Key Terms & Conditions Overview</h2>
+            <p class="section-intro-text">The Pay After Placement Program is governed by specific terms and conditions. Below is a summary. It is crucial to read the full Terms & Conditions document carefully before applying.</p>
+            <div class="accordion">
+                <!-- Item 1 -->
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h4><i class="fas fa-coins icon"></i>1. Financial Commitment & PAP Model</h4>
+                        <i class="fas fa-chevron-down toggle-icon"></i>
+                    </div>
+                    <div class="accordion-content"><div class="accordion-content-inner">
+                        <p>Summary: Student agrees to pay the course fee of ₹1,00,000 + GST and a Job Consultation Fee (one month's gross salary) only after successful job placement facilitated by iTokyo Academy, subject to all program conditions being met.</p>
+                    </div></div>
+                </div>
+                <!-- Item 2 -->
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h4><i class="fas fa-wallet icon"></i>2. Initial Fees (Non-Refundable)</h4>
+                        <i class="fas fa-chevron-down toggle-icon"></i>
+                    </div>
+                    <div class="accordion-content"><div class="accordion-content-inner">
+                        <p>Summary: A non-refundable Material & Resource Fee of INR 5,500 + GST is payable upon registration. Official examination fees (e.g., JLPT) are separate and borne by the student directly.</p>
+                    </div></div>
+                </div>
+                <!-- Item 3 -->
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h4><i class="fas fa-tasks icon"></i>3. Mandatory Assessments & PAP Continuation</h4>
+                        <i class="fas fa-chevron-down toggle-icon"></i>
+                    </div>
+                    <div class="accordion-content"><div class="accordion-content-inner">
+                        <p>Summary: Student must clear N5 (3rd month), N4 (6th month), and N3 (10th month) assessments. Failure to clear any assessment leads to cessation of the PAP model. Student may continue training by paying the standard course fee: <strong>[ACTION: Provide Standard Fee Amount/Structure Here]</strong>. iTokyo Academy is not obligated for placement assistance under PAP if assessments are not cleared.</p>
+                    </div></div>
+                </div>
+                <!-- Item 4 -->
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h4><i class="fas fa-calendar-check icon"></i>4. Attendance Requirement</h4>
+                        <i class="fas fa-chevron-down toggle-icon"></i>
+                    </div>
+                    <div class="accordion-content"><div class="accordion-content-inner">
+                        <p>Summary: Minimum 95% - 100% attendance in all classes and sessions is mandatory to remain eligible for the PAP program benefits and placement assistance.</p>
+                    </div></div>
+                </div>
+                 <!-- Item 5 -->
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h4><i class="fas fa-gavel icon"></i>5. Code of Conduct & Disqualification</h4>
+                        <i class="fas fa-chevron-down toggle-icon"></i>
+                    </div>
+                    <div class="accordion-content"><div class="accordion-content-inner">
+                        <p>Summary: Strict adherence to iTokyo Academy's code of conduct is required. Misconduct (including but not limited to requesting/lending money, inappropriate relationships, unauthorized leave/groups, sharing contacts without consent) will result in immediate disqualification from the PAP program and forfeiture of any benefits.</p>
+                    </div></div>
+                </div>
+                <!-- Item 6 -->
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h4><i class="fas fa-file-signature icon"></i>6. Document Submission & Verification</h4>
+                        <i class="fas fa-chevron-down toggle-icon"></i>
+                    </div>
+                    <div class="accordion-content"><div class="accordion-content-inner">
+                        <p>Summary: Student must submit original educational documents (10th, 12th, Degree, etc.) and a cancelled cheque leaf at the time of admission. iTokyo Academy reserves the right to verify these documents.</p>
+                    </div></div>
+                </div>
+                <!-- Item 7 -->
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h4><i class="fas fa-users icon"></i>7. Parental/Guardian Consent</h4>
+                        <i class="fas fa-chevron-down toggle-icon"></i>
+                    </div>
+                    <div class="accordion-content"><div class="accordion-content-inner">
+                        <p>Summary: Enrollment in the PAP program must be with the full knowledge, understanding, and consent of the student's parent(s) or legal guardian(s).</p>
+                    </div></div>
+                </div>
+                <!-- Item 8 -->
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h4><i class="fas fa-user-tie icon"></i>8. Placement Process & Student Cooperation</h4>
+                        <i class="fas fa-chevron-down toggle-icon"></i>
+                    </div>
+                    <div class="accordion-content"><div class="accordion-content-inner">
+                        <p>Summary: Student must actively cooperate with iTokyo Academy's placement team, attend all preparatory sessions, interviews, and accept suitable job offers. Specific conditions regarding job offer acceptance and location flexibility apply.</p>
+                    </div></div>
+                </div>
+                <!-- Item 9 -->
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h4><i class="fas fa-plane-departure icon"></i>9. Relocation & Job Acceptance</h4>
+                        <i class="fas fa-chevron-down toggle-icon"></i>
+                    </div>
+                    <div class="accordion-content"><div class="accordion-content-inner">
+                        <p>Summary: Student must be prepared to relocate to Japan for employment. Conditions regarding acceptance of job offers meeting certain criteria will be outlined in the full agreement.</p>
+                    </div></div>
+                </div>
+                <!-- Item 10 -->
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h4><i class="fas fa-handshake-slash icon"></i>10. Program Discontinuation / Breach</h4>
+                        <i class="fas fa-chevron-down toggle-icon"></i>
+                    </div>
+                    <div class="accordion-content"><div class="accordion-content-inner">
+                        <p>Summary: Outlines conditions under which a student might be discontinued from the program or be considered in breach of the agreement, and the financial implications thereof (e.g., immediate liability for full standard course fees).</p>
+                    </div></div>
+                </div>
+                <!-- Item 11 -->
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h4><i class="fas fa-balance-scale icon"></i>11. Governing Law & Jurisdiction</h4>
+                        <i class="fas fa-chevron-down toggle-icon"></i>
+                    </div>
+                    <div class="accordion-content"><div class="accordion-content-inner">
+                        <p>Summary: The PAP agreement will be governed by the laws of India, and disputes shall be subject to the exclusive jurisdiction of courts in [ACTION: Specify City/Jurisdiction, e.g., Chennai].</p>
+                    </div></div>
+                </div>
+                <!-- Item 12 -->
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h4><i class="fas fa-edit icon"></i>12. Agreement & Amendments</h4>
+                        <i class="fas fa-chevron-down toggle-icon"></i>
+                    </div>
+                    <div class="accordion-content"><div class="accordion-content-inner">
+                        <p>Summary: This program is subject to a formal written agreement. Any amendments or waivers must be in writing and signed by both parties. This summary is for informational purposes and the formal agreement will prevail.</p>
+                    </div></div>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 2em;">
+                <button type="button" id="viewFullTermsBtn" class="terms-cta-button"><i class="fas fa-book-open" style="margin-right: 8px;"></i>View Full Terms & Conditions</button>
+            </div>
+        </section>
+
+        <section id="registration-form">
+            <h2><i class="fas fa-user-plus section-title-icon" aria-hidden="true"></i>Start Your Journey: Register for the PAP Program!</h2>
+            <p class="section-intro-text">Ready to take the first step towards an exciting tech career in Japan? Fill out the registration form below. Our team will review your application and get in touch with you for the next steps.</p>
+            <div class="registration-form-container">
+                <form id="papRegistrationForm">
+                    <div class="form-group">
+                        <label for="fullName">Full Name <span style="color:red;">*</span></label>
+                        <input type="text" id="fullName" name="fullName" required>
+                        <span class="error-message" id="fullNameError"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="dob">Date of Birth <span style="color:red;">*</span></label>
+                        <input type="date" id="dob" name="dob" required>
+                        <span class="error-message" id="dobError"></span>
+                    </div>
+                    <div class="form-group">
+                        <label>Gender <span style="color:red;">*</span></label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="gender" value="Male" required> Male</label>
+                            <label><input type="radio" name="gender" value="Female"> Female</label>
+                            <label><input type="radio" name="gender" value="Other"> Other</label>
+                        </div>
+                        <span class="error-message" id="genderError"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="education">Highest Education Qualification <span style="color:red;">*</span></label>
+                        <input type="text" id="education" name="education" required>
+                        <span class="error-message" id="educationError"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="gradYear">Year of Graduation <span style="color:red;">*</span></label>
+                        <input type="number" id="gradYear" name="gradYear" min="1980" max="2025" required>
+                        <span class="error-message" id="gradYearError"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address <span style="color:red;">*</span></label>
+                        <input type="email" id="email" name="email" required>
+                        <span class="error-message" id="emailError"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="mobile">Mobile / WhatsApp Number <span style="color:red;">*</span></label>
+                        <input type="tel" id="mobile" name="mobile" pattern="[6-9]{1}[0-9]{9}" title="Please enter a valid 10-digit Indian mobile number" required>
+                        <span class="error-message" id="mobileError"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="parentMobile">Parent's Contact Number <span style="color:red;">*</span></label>
+                        <input type="tel" id="parentMobile" name="parentMobile" pattern="[6-9]{1}[0-9]{9}" title="Please enter a valid 10-digit Indian mobile number" required>
+                        <span class="error-message" id="parentMobileError"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="itCourse">Preferred IT Technology Course <span style="color:red;">*</span></label>
+                        <select id="itCourse" name="itCourse" required>
+                            <option value="">-- Select an IT Course --</option>
+                            <option value="Full Stack Development">Full Stack Development (MERN/MEAN)</option>
+                            <option value="Data Science">Data Science & Machine Learning (Python)</option>
+                            <option value="Cloud Computing">Cloud Computing (AWS/Azure)</option>
+                            <option value="Software Testing">Software Testing & QA</option>
+                            <!-- [ACTION: Populate with actual IT course options from iTokyo Academy] -->
+                            <option value="Other">Other (Specify if not listed)</option>
+                        </select>
+                        <span class="error-message" id="itCourseError"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="japaneseLevel">Current/Target Japanese Level <span style="color:red;">*</span></label>
+                        <select id="japaneseLevel" name="japaneseLevel" required>
+                            <option value="">-- Select Level --</option>
+                            <option value="Beginner">Beginner (No prior knowledge)</option>
+                            <option value="N5 Attempted/Passed">N5 Attempted/Passed</option>
+                            <option value="N4 Attempted/Passed">N4 Attempted/Passed</option>
+                            <option value="N3 Attempted/Passed">N3 Attempted/Passed</option>
+                            <option value="N2 Attempted/Passed">N2 Attempted/Passed</option>
+                        </select>
+                        <span class="error-message" id="japaneseLevelError"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="startDate">Preferred Course Start Date/Batch (Optional)</label>
+                        <select id="startDate" name="startDate">
+                            <option value="">-- Select Preferred Batch (if any) --</option>
+                            <!-- [ACTION: Populate with upcoming batch dates if available] -->
+                            <option value="Next Available Batch">Next Available Batch</option>
+                            <option value="Jan 2025">Jan 2025</option>
+                            <option value="Apr 2025">Apr 2025</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="currentAddress">Current Address <span style="color:red;">*</span></label>
+                        <textarea id="currentAddress" name="currentAddress" required></textarea>
+                        <span class="error-message" id="currentAddressError"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="permanentAddress">Permanent Address <span style="color:red;">*</span></label>
+                        <textarea id="permanentAddress" name="permanentAddress" required></textarea>
+                        <span class="error-message" id="permanentAddressError"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="photo">Passport Size Photograph Upload <span style="color:red;">*</span> (.jpg, .png, max 2MB)</label>
+                        <input type="file" id="photo" name="photo" accept=".jpg, .jpeg, .png" required>
+                        <span class="error-message" id="photoError"></span>
+                    </div>
+                    <div class="form-group checkbox-group">
+                        <label>
+                            <input type="checkbox" id="agreeTerms" name="agreeTerms" required>
+                            I declare that I have read, understood, and agree to the iTokyo Academy Pay After Placement Program <a id="declarationTermsLink">Terms and Conditions</a>. <span style="color:red;">*</span>
+                        </label>
+                        <span class="error-message" id="agreeTermsError"></span>
+                    </div>
+                    <div style="text-align: center;">
+                        <button type="submit" class="form-submit-btn">Submit Application <i class="fas fa-paper-plane" style="margin-left:8px;"></i></button>
+                    </div>
+                </form>
+                <div id="form-submission-message"></div>
+            </div>
+        </section>
+
+        <section id="testimonials">
+            <h2><i class="fas fa-star section-title-icon" aria-hidden="true"></i>Hear From Our Successful Alumni</h2>
+            <p class="section-intro-text">[ACTION: Replace placeholders with actual testimonials and hiring partner logos if available. Otherwise, this section can be simplified or removed.]</p>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <img src="https://via.placeholder.com/80x80.png?text=Student1" alt="Student Testimonial 1" class="profile-pic">
+                    <p class="quote">"iTokyo Academy's PAP program was a game-changer! I learned so much and landed my dream job in Tokyo. Highly recommend!"</p>
+                    <p class="name">Priya Sharma</p>
+                    <p class="company">Tech Solutions Inc., Tokyo</p>
+                </div>
+                <div class="testimonial-card">
+                    <img src="https://via.placeholder.com/80x80.png?text=Student2" alt="Student Testimonial 2" class="profile-pic">
+                    <p class="quote">"The training was intense but worth it. The pay-after-placement model gave me peace of mind. Thank you, iTokyo!"</p>
+                    <p class="name">Rajesh Kumar</p>
+                    <p class="company">Global Innovators Ltd., Osaka</p>
+                </div>
+                <div class="testimonial-card">
+                    <img src="https://via.placeholder.com/80x80.png?text=Student3" alt="Student Testimonial 3" class="profile-pic">
+                    <p class="quote">"From learning Japanese N2 to mastering full-stack, iTokyo Academy guided me all the way. Now I'm working in Japan!"</p>
+                    <p class="name">Anjali Mehta</p>
+                    <p class="company">Sakura Systems, Kyoto</p>
+                </div>
+            </div>
+            <div class="hiring-partners-logos">
+                <p>Trusted by Students & Companies</p>
+                <div class="logo-container">
+                    <img src="https://via.placeholder.com/150x50.png?text=Partner+Logo+1" alt="Hiring Partner 1">
+                    <img src="https://via.placeholder.com/150x50.png?text=Partner+Logo+2" alt="Hiring Partner 2">
+                    <img src="https://via.placeholder.com/150x50.png?text=Partner+Logo+3" alt="Hiring Partner 3">
+                    <!-- Add more logos as needed -->
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Terms & Conditions Modal -->
+    <div id="termsModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>iTokyo Academy - Pay After Placement Program Terms & Conditions</h3>
+                <span class="close-btn" id="closeTermsModal">&times;</span>
+            </div>
+            <div class="modal-body" id="termsModalBody">
+                <h4>[ACTION: The full text of the "iTokyo Academy - Pay After Placement Program Registration Form" document should be inserted here. For now, this is a placeholder.]</h4>
+                
+                <p><strong>Introduction:</strong> This document outlines the terms and conditions for the Pay After Placement (PAP) Program offered by iTokyo Academy.</p>
+
+                <h4>1. Financial Commitment & PAP Model:</h4>
+                <ul>
+                    <li>The student agrees to pay iTokyo Academy a course fee of One Lakh Indian Rupees (₹1,00,000) plus applicable Goods and Services Tax (GST).</li>
+                    <li>Additionally, a Job Consultation Fee equivalent to one (1) month's gross salary (as per the offer letter from the employing company in Japan) is payable to iTokyo Academy.</li>
+                    <li>These fees are payable ONLY after the student secures a job placement in Japan through the efforts and facilitation of iTokyo Academy, subject to all terms herein.</li>
+                </ul>
+
+                <h4>2. Initial Fees (Non-Refundable):</h4>
+                <ul>
+                    <li>A non-refundable Material & Resource Fee of Five Thousand Five Hundred Indian Rupees (INR 5,500) plus applicable GST must be paid by the student upon registration for the PAP program.</li>
+                    <li>Official examination fees for Japanese Language Proficiency Test (JLPT) or other recognized tests are separate and must be borne by the student directly as per the respective examination body's charges.</li>
+                </ul>
+
+                <h4>3. Mandatory Assessments & PAP Continuation:</h4>
+                <ul>
+                    <li>The student must mandatorily appear for and clear the following assessments:
+                        <ul>
+                            <li>Japanese Language N5 level assessment by the 3rd month of the program.</li>
+                            <li>Japanese Language N4 level assessment by the 6th month of the program.</li>
+                            <li>Japanese Language N3 level assessment by the 10th month of the program.</li>
+                        </ul>
+                    </li>
+                    <li>The PAP model and its associated benefits (including deferred payment and placement assistance under PAP terms) will continue ONLY if the student successfully clears ALL the aforementioned assessments within the stipulated timelines.</li>
+                    <li>If the student fails to qualify in any of these mandatory assessments, the PAP model will cease. The student will then be required to pay the standard iTokyo Academy course fee for the completed and ongoing training modules to continue their studies. The standard fee structure is [ACTION: Specify Standard Fee Amount/Structure]. In such a scenario, iTokyo Academy is not obligated to provide placement assistance under the PAP terms.</li>
+                </ul>
+
+                <h4>4. Attendance Requirement:</h4>
+                <ul>
+                    <li>A minimum of 95% to 100% attendance in all scheduled classes, workshops, and other program-related activities is mandatory for the student to remain eligible for the PAP program benefits, including placement assistance.</li>
+                </ul>
+
+                <h4>5. Code of Conduct & Disqualification:</h4>
+                <ul>
+                    <li>The student must adhere strictly to iTokyo Academy's code of conduct, which prohibits (but is not limited to): requesting or lending money among students/staff, forming or participating in unauthorized groups or unions, engaging in inappropriate relationships with staff or other students, taking unauthorized leave, and sharing personal contact information of staff/students without explicit consent.</li>
+                    <li>Any act of misconduct, indiscipline, or violation of the code of conduct will result in immediate disqualification from the PAP program, and the student will forfeit any benefits under the PAP model. The student may also be liable for the full standard course fees.</li>
+                </ul>
+                
+                <h4>6. Document Submission & Verification:</h4>
+                <ul>
+                    <li>The student must submit all original educational documents (including 10th mark sheet, 12th mark sheet, degree certificates, etc.) and one cancelled cheque leaf at the time of admission to the PAP program.</li>
+                    <li>iTokyo Academy reserves the right to verify all submitted documents.</li>
+                </ul>
+
+                <h4>7. Parental/Guardian Consent:</h4>
+                <ul>
+                    <li>Enrollment in the PAP program must be with the full knowledge, understanding, and explicit consent of the student's parent(s) or legal guardian(s). A consent form may be required.</li>
+                </ul>
+
+                <h4>8. Placement Process & Student Cooperation:</h4>
+                <ul>
+                    <li>The student must actively participate in and cooperate fully with iTokyo Academy's placement process. This includes attending all placement preparation workshops, mock interviews, and company-specific training sessions.</li>
+                    <li>The student must apply to companies as recommended by iTokyo Academy and attend all scheduled interviews.</li>
+                    <li>Failure to cooperate may result in termination from the placement assistance component of the PAP.</li>
+                </ul>
+
+                <h4>9. Relocation & Job Acceptance:</h4>
+                <ul>
+                    <li>The student must be prepared and willing to relocate to Japan for employment opportunities secured through iTokyo Academy.</li>
+                    <li>The student is expected to accept any suitable job offer that meets predefined criteria (e.g., minimum salary, role alignment) as communicated by iTokyo Academy during the placement phase. Unreasonable refusal of suitable offers may be considered a breach of the PAP agreement.</li>
+                </ul>
+
+                <h4>10. Program Discontinuation / Breach of Agreement:</h4>
+                <ul>
+                    <li>If the student chooses to discontinue the program for personal reasons after commencement, or breaches any terms of this agreement, they may be liable to pay a pro-rata amount of the standard course fee or the full standard course fee, depending on the stage of discontinuation and the nature of the breach.</li>
+                    <li>Specific conditions leading to breach and subsequent financial liabilities will be detailed in the formal PAP agreement.</li>
+                </ul>
+
+                <h4>11. Governing Law & Jurisdiction:</h4>
+                <ul>
+                    <li>This PAP agreement and any disputes arising from it shall be governed by the laws of India.</li>
+                    <li>All disputes shall be subject to the exclusive jurisdiction of the courts in [ACTION: Specify City/Jurisdiction, e.g., Chennai, Tamil Nadu].</li>
+                </ul>
+                
+                <h4>12. Entire Agreement & Amendments:</h4>
+                <ul>
+                    <li>The formal signed PAP agreement, along with any annexures, constitutes the entire understanding between the student and iTokyo Academy concerning the PAP program.</li>
+                    <li>Any amendments, waivers, or modifications to this agreement must be in writing and signed by authorized representatives of both parties.</li>
+                    <li>The information provided on the website or other promotional materials is for informational purposes; the formal signed agreement will prevail in case of any discrepancy.</li>
+                </ul>
+                <p><em>By applying to the iTokyo Academy Pay After Placement Program, you acknowledge that you have read, understood, and agree to be bound by these terms and conditions and the detailed formal agreement.</em></p>
+            </div>
+        </div>
+    </div>
+
+    <a href="#" id="back-to-top" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up" aria-hidden="true"></i>
+    </a>
+
+    <footer>
+        <div class="container">
+            <p class="footer-brand">Pay After Placement Program © <span id="currentYear"></span> <span class="academy">iTokyo Academy</span>. All Rights Reserved.</p>
+            <p>Your Gateway to a Tech Career in Japan. Powered by <a href="https://itokyoacademy.com" target="_blank" rel="noopener noreferrer">itokyoacademy.com</a>.</p>
+             <div style="margin: 15px 0;">
+                <strong>Quick Links:</strong>
+                <a href="#hero-pap" style="margin:0 5px;">Home</a> |
+                <a href="#about-pap" style="margin:0 5px;">About PAP</a> |
+                <a href="#course-breakdown" style="margin:0 5px;">Courses</a> |
+                <a href="#registration-form" style="margin:0 5px;">Apply</a> |
+                <a href="#" id="footerTermsLink" style="margin:0 5px;">Full T&C</a>
+            </div>
+            <p class="footer-contact"><strong>Contact iTokyo Academy:</strong> <a href="tel:9942993900"><i class="fas fa-phone-alt"></i> 9942993900</a> | <a href="mailto:pap.admissions@itokyoacademy.com"><i class="fas fa-envelope"></i> pap.admissions@itokyoacademy.com</a></p>
+            <div class="social-media-links" style="margin-top:10px;">
+                <!-- [ACTION: Add actual social media links] -->
+                <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Facebook" style="font-size: 1.5em; margin: 0 10px;"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" style="font-size: 1.5em; margin: 0 10px;"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram" style="font-size: 1.5em; margin: 0 10px;"><i class="fab fa-instagram"></i></a>
+            </div>
+            <p style="font-size: 0.8em; margin-top: 15px;">This guide serves as a comprehensive resource; always confirm specific details with your iTokyo Academy consultant. The formal PAP agreement will contain the complete and binding terms.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Accordion functionality
+        const accordionItems = document.querySelectorAll('.accordion-item');
+        let uniqueIdCounter = 0; 
+
+        accordionItems.forEach(item => {
+            const header = item.querySelector('.accordion-header');
+            const content = item.querySelector('.accordion-content');
+            const contentInner = content.querySelector('.accordion-content-inner');
+
+            const contentId = `accordion-content-pap-${uniqueIdCounter}`;
+            content.setAttribute('id', contentId);
+            header.setAttribute('aria-controls', contentId);
+            header.setAttribute('aria-expanded', 'false');
+
+            if (header.tagName.toLowerCase() !== 'button') {
+                header.setAttribute('role', 'button');
+                header.setAttribute('tabindex', '0');
+            }
+            uniqueIdCounter++;
+
+            const toggleAccordion = () => {
+                const isActive = item.classList.contains('active');
+                
+                // Optional: Close other accordions in the same group if you want only one open at a time
+                // const parentAccordion = item.closest('.accordion');
+                // if (parentAccordion) {
+                //     parentAccordion.querySelectorAll('.accordion-item.active').forEach(otherItem => {
+                //         if (otherItem !== item) {
+                //             otherItem.classList.remove('active');
+                //             otherItem.querySelector('.accordion-content').style.maxHeight = null;
+                //             otherItem.querySelector('.accordion-header').setAttribute('aria-expanded', 'false');
+                //         }
+                //     });
+                // }
+
+                item.classList.toggle('active');
+                if (item.classList.contains('active')) {
+                    content.style.maxHeight = contentInner.scrollHeight + "px";
+                    header.setAttribute('aria-expanded', 'true');
+                } else {
+                    content.style.maxHeight = null;
+                    header.setAttribute('aria-expanded', 'false');
+                }
+            };
+
+            header.addEventListener('click', toggleAccordion);
+            header.addEventListener('keydown', (event) => {
+                if (event.key === 'Enter' || event.key === ' ') {
+                    event.preventDefault();
+                    toggleAccordion();
+                }
+            });
+        });
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navMenu = document.getElementById('nav-menu');
+
+        if (mobileMenuBtn && navMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                navMenu.classList.toggle('mobile-visible');
+                const isExpanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
+                mobileMenuBtn.setAttribute('aria-expanded', !isExpanded);
+                mobileMenuBtn.innerHTML = isExpanded ? 
+                    '<i class="fas fa-bars" aria-hidden="true"></i>' : 
+                    '<i class="fas fa-times" aria-hidden="true"></i>';
+            });
+        }
+
+        // Navigation highlighting and smooth scroll
+        const sections = document.querySelectorAll('section[id], header[id]');
+        const navLinks = document.querySelectorAll('#main-nav ul li a');
+        const navElement = document.getElementById('main-nav');
+        let navHeight = navElement ? navElement.offsetHeight : 70; 
+
+        function updateNavHeight() {
+            if (navElement) navHeight = navElement.offsetHeight;
+        }
+        
+        window.addEventListener('load', updateNavHeight);
+        window.addEventListener('resize', updateNavHeight);
+
+        window.addEventListener('scroll', () => {
+            let currentSectionId = '';
+            let scrollPosition = window.scrollY;
+            
+            if (navElement) {
+                navElement.classList.toggle('scrolled', scrollPosition > 50);
+            }
+            
+            const backToTopBtn = document.getElementById('back-to-top');
+            if (backToTopBtn) {
+                backToTopBtn.classList.toggle('visible', scrollPosition > 300);
+            }
+            
+            let minDistance = Infinity;
+            let activeSectionFound = false;
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.offsetHeight;
+                // Adjusted offset for better accuracy
+                const triggerPoint = sectionTop - navHeight - (window.innerHeight * 0.3); 
+                if (scrollPosition >= triggerPoint && scrollPosition < (triggerPoint + sectionHeight)) {
+                     currentSectionId = section.getAttribute('id');
+                     activeSectionFound = true;
+                }
+                 // Section visibility animation
+                if (section.getBoundingClientRect().top < window.innerHeight * 0.85) {
+                    section.classList.add('visible');
+                }
+            });
+            
+            // Fallback if no section is perfectly matched
+            if (!activeSectionFound && sections.length > 0) {
+                if (scrollPosition < (sections[0].offsetTop - navHeight)) {
+                    currentSectionId = sections[0].getAttribute('id');
+                } else {
+                    sections.forEach(section => {
+                        const distance = Math.abs(scrollPosition - (section.offsetTop - navHeight - (window.innerHeight * 0.1)));
+                        if (distance < minDistance) {
+                            minDistance = distance;
+                            currentSectionId = section.getAttribute('id');
+                        }
+                    });
+                }
+            }
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                const href = link.getAttribute('href');
+                if (href && href.substring(1) === currentSectionId) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Initial scroll event dispatch and hash handling
+        window.addEventListener('load', () => {
+            updateNavHeight(); 
+            window.dispatchEvent(new Event('scroll')); // Trigger scroll for initial highlighting and animations
+
+            if (window.location.hash) {
+                const hashId = window.location.hash.substring(1);
+                const targetSection = document.getElementById(hashId);
+                if (targetSection) {
+                    setTimeout(() => {
+                        window.scrollTo({
+                            top: targetSection.offsetTop - navHeight - 20,
+                            behavior: 'auto' // 'auto' for instant jump on load
+                        });
+                        // Re-trigger scroll to ensure correct highlighting after jump
+                        setTimeout(() => window.dispatchEvent(new Event('scroll')), 50);
+                    }, 100);
+                }
+            } else if (sections.length > 0 && navLinks.length > 0) { 
+                // Default to first link active if at top of page
+                if (window.pageYOffset < 50) {
+                    navLinks.forEach(l => l.classList.remove('active')); 
+                    navLinks[0].classList.add('active'); 
+                }
+            }
+        });
+        
+        // Back to top button functionality
+        const backToTopBtn = document.getElementById('back-to-top');
+        if (backToTopBtn) {
+            backToTopBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
+        
+        // Smooth scroll for nav links and hero CTA
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href.length > 1 && document.querySelector(href)) { // Ensure it's a valid selector and not just "#"
+                    e.preventDefault();
+                    
+                    if (navMenu && navMenu.classList.contains('mobile-visible')) {
+                        navMenu.classList.remove('mobile-visible');
+                         if (mobileMenuBtn) { 
+                            mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                            mobileMenuBtn.innerHTML = '<i class="fas fa-bars" aria-hidden="true"></i>';
+                        }
+                    }
+                    
+                    const targetId = href.substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    
+                    if (targetElement) {
+                        updateNavHeight(); 
+                        window.scrollTo({
+                            top: targetElement.offsetTop - navHeight - 20,
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+        
+        // Modal Functionality for Terms & Conditions
+        const termsModal = document.getElementById('termsModal');
+        const viewFullTermsBtn = document.getElementById('viewFullTermsBtn');
+        const declarationTermsLink = document.getElementById('declarationTermsLink');
+        const footerTermsLink = document.getElementById('footerTermsLink');
+        const closeTermsModalBtn = document.getElementById('closeTermsModal');
+
+        function openTermsModal() {
+            if (termsModal) termsModal.style.display = "block";
+        }
+        function closeTermsModal() {
+            if (termsModal) termsModal.style.display = "none";
+        }
+
+        if (viewFullTermsBtn) viewFullTermsBtn.addEventListener('click', openTermsModal);
+        if (declarationTermsLink) declarationTermsLink.addEventListener('click', openTermsModal);
+        if (footerTermsLink) {
+            footerTermsLink.addEventListener('click', (e) => {
+                e.preventDefault(); // Prevent default anchor behavior
+                openTermsModal();
+            });
+        }
+        if (closeTermsModalBtn) closeTermsModalBtn.addEventListener('click', closeTermsModal);
+        
+        window.addEventListener('click', (event) => {
+            if (event.target == termsModal) {
+                closeTermsModal();
+            }
+        });
+        document.addEventListener('keydown', function(event) {
+            if (event.key === "Escape" && termsModal && termsModal.style.display === "block") {
+                closeTermsModal();
+            }
+        });
+
+        // Form Validation and Submission
+        const papForm = document.getElementById('papRegistrationForm');
+        const submissionMessageEl = document.getElementById('form-submission-message');
+
+        if (papForm) {
+            papForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                clearErrors();
+                let isValid = validateForm();
+
+                if (isValid) {
+                    // Simulate form submission
+                    // [ACTION: Implement actual data handling here - e.g., send to email, Google Sheets, API]
+                    console.log("Form data is valid. Submitting...");
+                    const formData = new FormData(papForm);
+                    for (let [key, value] of formData.entries()) {
+                        console.log(key + ': ' + value);
+                    }
+                    
+                    // Display success message
+                    submissionMessageEl.className = 'success';
+                    submissionMessageEl.textContent = 'Thank you for your application! We will review your details and get in touch with you shortly.';
+                    submissionMessageEl.style.display = 'block';
+                    papForm.reset(); 
+                } else {
+                    submissionMessageEl.className = 'error';
+                    submissionMessageEl.textContent = 'Please correct the errors in the form.';
+                    submissionMessageEl.style.display = 'block';
+                }
+            });
+        }
+
+        function validateForm() {
+            let valid = true;
+            // Full Name
+            const fullName = document.getElementById('fullName');
+            if (fullName.value.trim() === '') {
+                setError(fullName, 'fullNameError', 'Full Name is required.');
+                valid = false;
+            }
+            // DOB
+            const dob = document.getElementById('dob');
+            if (dob.value === '') {
+                setError(dob, 'dobError', 'Date of Birth is required.');
+                valid = false;
+            }
+            // Gender
+            const gender = document.querySelector('input[name="gender"]:checked');
+            if (!gender) {
+                setError(document.querySelector('input[name="gender"]'), 'genderError', 'Please select your gender.'); // Set error on first radio
+                valid = false;
+            }
+            // Education
+            const education = document.getElementById('education');
+            if (education.value.trim() === '') {
+                setError(education, 'educationError', 'Highest Education is required.');
+                valid = false;
+            }
+            // Grad Year
+            const gradYear = document.getElementById('gradYear');
+            if (gradYear.value.trim() === '' || isNaN(gradYear.value) || gradYear.value < 1980 || gradYear.value > new Date().getFullYear() + 5) {
+                setError(gradYear, 'gradYearError', 'Please enter a valid Graduation Year.');
+                valid = false;
+            }
+            // Email
+            const email = document.getElementById('email');
+            if (email.value.trim() === '' || !isValidEmail(email.value)) {
+                setError(email, 'emailError', 'Please enter a valid Email Address.');
+                valid = false;
+            }
+            // Mobile
+            const mobile = document.getElementById('mobile');
+            if (mobile.value.trim() === '' || !isValidMobile(mobile.value)) {
+                setError(mobile, 'mobileError', 'Please enter a valid 10-digit Mobile Number.');
+                valid = false;
+            }
+            // Parent Mobile
+            const parentMobile = document.getElementById('parentMobile');
+             if (parentMobile.value.trim() === '' || !isValidMobile(parentMobile.value)) {
+                setError(parentMobile, 'parentMobileError', "Please enter a valid 10-digit Parent's Mobile Number.");
+                valid = false;
+            }
+            // IT Course
+            const itCourse = document.getElementById('itCourse');
+            if (itCourse.value === '') {
+                setError(itCourse, 'itCourseError', 'Please select your preferred IT Course.');
+                valid = false;
+            }
+            // Japanese Level
+            const japaneseLevel = document.getElementById('japaneseLevel');
+            if (japaneseLevel.value === '') {
+                setError(japaneseLevel, 'japaneseLevelError', 'Please select your Japanese Level.');
+                valid = false;
+            }
+            // Current Address
+            const currentAddress = document.getElementById('currentAddress');
+            if (currentAddress.value.trim() === '') {
+                setError(currentAddress, 'currentAddressError', 'Current Address is required.');
+                valid = false;
+            }
+            // Permanent Address
+            const permanentAddress = document.getElementById('permanentAddress');
+            if (permanentAddress.value.trim() === '') {
+                setError(permanentAddress, 'permanentAddressError', 'Permanent Address is required.');
+                valid = false;
+            }
+            // Photo
+            const photo = document.getElementById('photo');
+            if (photo.files.length === 0) {
+                setError(photo, 'photoError', 'Please upload your photograph.');
+                valid = false;
+            } else {
+                const fileSize = photo.files[0].size / 1024 / 1024; // in MB
+                if (fileSize > 2) {
+                    setError(photo, 'photoError', 'File size must be less than 2MB.');
+                    valid = false;
+                }
+                const allowedTypes = ['image/jpeg', 'image/png', 'image/jpg'];
+                if (!allowedTypes.includes(photo.files[0].type)) {
+                     setError(photo, 'photoError', 'Only JPG, JPEG, or PNG files are allowed.');
+                     valid = false;
+                }
+            }
+            // Agree Terms
+            const agreeTerms = document.getElementById('agreeTerms');
+            if (!agreeTerms.checked) {
+                setError(agreeTerms, 'agreeTermsError', 'You must agree to the Terms and Conditions.');
+                valid = false;
+            }
+            return valid;
+        }
+
+        function setError(inputElement, errorElementId, message) {
+            const errorElement = document.getElementById(errorElementId);
+            if(inputElement) inputElement.style.borderColor = '#dc3545'; // Red border for error
+            if(errorElement) errorElement.textContent = message;
+        }
+
+        function clearErrors() {
+            const errorMessages = document.querySelectorAll('.error-message');
+            errorMessages.forEach(el => el.textContent = '');
+            const inputs = papForm.querySelectorAll('input, select, textarea');
+            inputs.forEach(input => input.style.borderColor = 'var(--border-color)'); // Reset border
+            if (submissionMessageEl) submissionMessageEl.style.display = 'none';
+        }
+
+        function isValidEmail(email) {
+            // Basic email validation regex
+            const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            return re.test(String(email).toLowerCase());
+        }
+        function isValidMobile(mobile) {
+            const re = /^[6-9]\d{9}$/;
+            return re.test(String(mobile));
+        }
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            document.body.classList.add('loaded'); // For potential global load animations
+            window.dispatchEvent(new Event('scroll')); // Ensure sections visible on load are animated in
+        });
+
+    </script>
+
+</body>
+</html>
